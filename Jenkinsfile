@@ -3,6 +3,7 @@ pipeline {
 
     stages {
         stage('Deploy to Docker') {
+            agent { dockerfile true }
             steps {
                 script {
                     sh 'docker compose up --build -d'
