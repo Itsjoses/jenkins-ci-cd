@@ -3,9 +3,11 @@ pipeline {
   stages {
     stage('Deploy to Docker') {
       steps {
-        sh '''
-          docker compose up --build -d
-        '''
+        script {
+          sh '''
+            docker compose up --build -d
+          '''
+        }
       }
     }
   }
