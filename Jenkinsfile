@@ -1,12 +1,19 @@
 pipeline {
   agent { dockerfile true }
   stages {
-    stage('Test') {
+    stage('Deploy to Docker') {
       steps {
         sh '''
-          ls -a
+          docker compose up --build -d
         '''
       }
     }
+  }
+
+  post {
+      always {
+          echo "Cleaning up workspace..."
+          cleanWs()
+       }
   }
 }
