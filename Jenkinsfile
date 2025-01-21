@@ -6,7 +6,7 @@ pipeline {
             agent { dockerfile true }
             steps {
                 script {
-                    sh 'docker compose up --build -d'
+                    sh 'docker --version'
                 }
             }
         }
