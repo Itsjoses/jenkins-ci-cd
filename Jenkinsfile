@@ -2,6 +2,7 @@ pipeline {
   agent { dockerfile true }
   stages {
     stage('Deploy to Docker') {
+      agent any
       steps {
         script {
           sh '''
