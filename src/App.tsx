@@ -26,7 +26,7 @@ function App() {
         </p>
       </div>
       <p className="read-the-docs">
-        CI/CD testing 123
+        CI/CD Jenkinsfile Done
       </p>
       <p>
         {import.meta.env.VITE_TESTING}
