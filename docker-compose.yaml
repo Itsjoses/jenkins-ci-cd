@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  frontend:
+    container_name: jenkins-fe-testing
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5353:80"
